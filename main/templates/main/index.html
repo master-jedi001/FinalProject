@@ -1,0 +1,78 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+    Приложение для решения дифференциальных уравнений
+{% endblock %}
+
+{% block header %}
+    <link rel='stylesheet' href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block span %}
+    Приложение для решения дифференциальных уравнений
+{% endblock %}
+
+{% block body %}
+     <form method="post">
+         {% csrf_token %}
+
+         <div class="equation">
+             <p class="title">Приложение для решения задачи Коши для линейных дифференциальных уравнений вида:
+                 a<sub>n</sub>(x) y<sup>(n)</sup>(x) + a<sub>n-1</sub>(x) y<sup>(n-1)</sup>(x) + ... +
+                 a<sub>2</sub>(x) y<sup>''</sup>(x) + a<sub>1</sub>(x) y<sup>'</sup>(x) + a<sub>0</sub>(x) y(x)= f(x)</p>
+         </div>
+
+         <div class="input-group input-group-sm mb-3" id="inputOrder">
+             <span class="input-group-text">Введите порядок дифференциального уравнения:</span>
+             {{ form.order }}
+             <div>{{ form.errors.order }}</div>
+         </div>
+
+         <div class="input-group input-group-sm mb-3" id="inputCoefficients">
+             <span class="input-group-text">Введите коэффициенты уравнения:</span>
+             {{ form.coefficients }}
+             <div class="form-text">
+                 Коэффициенты необходимо вводить, разделяя их запятой и пробелом, в следующем формате:
+                 a<sub>0</sub>(x), a<sub>1</sub>(x), a<sub>2</sub>(x), ..., a<sub>n</sub>(x)
+                 <div>{{ form.errors.coefficients }}</div>
+             </div>
+         </div>
+
+         <div class="input-group input-group-sm mb-3" id="inputF">
+             <span class="input-group-text">Введите правую часть уравнения:</span>
+             {{ form.right_side }}
+             <div>{{ form.errors.right_side }}</div>
+         </div>
+
+         <div class="input-group input-group-sm mb-3" id="inputBegin">
+             <span class="input-group-text">Введите начало расчетной области:</span>
+             {{ form.segment_begin }}
+         </div>
+
+         <div class="input-group input-group-sm mb-3" id="inputEnd">
+             <span class="input-group-text">Введите конец расчетной области:</span>
+             {{ form.segment_end }}
+             <div>{{ form.errors.segment_end }}</div>
+         </div>
+
+         <div class="input-group input-group-sm mb-3" id="inputStep">
+             <span class="input-group-text">Введите расчетный шаг:</span>
+             {{ form.step }}
+             <div>{{ form.errors.step }}</div>
+         </div>
+
+         <div class="input-group input-group-sm mb-3" id="inputInit">
+             <span class="input-group-text">Введите начальные условия:</span>
+             {{ form.init_conditions }}
+             <div class="form-text">
+                 Начальные условия необходимо вводить, разделяя их запятой и пробелом, в следующем формате:
+                 y(0), y<sup>'</sup>(0), y<sup>''</sup>(0), ..., y<sup>(n-1)</sup>(0)
+                 <div>{{ form.errors.init_conditions }}</div>
+             </div>
+         </div>
+
+         <button type="submit" class="btn btn-dark">Решить</button>
+
+     </form>
+{% endblock %}

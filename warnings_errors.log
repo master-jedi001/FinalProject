@@ -1,0 +1,25 @@
+[2022-06-08 12:51:38,941 | exception | (form_validation.py).is_math_expr(22) | ERROR] В качестве аргумента функции is_math_expr возможно передается неподдерживаемый тип выражения.
+Traceback (most recent call last):
+  File "/Users/evgenijvavaev/PycharmProjects/final_project/difequation/main/form_validation.py", line 14, in is_math_expr
+    return isinstance(ne.evaluate(expr), numpy.ndarray)
+  File "/Users/evgenijvavaev/PycharmProjects/final_project/venv/lib/python3.10/site-packages/numexpr/necompiler.py", line 809, in evaluate
+    _names_cache[expr_key] = getExprNames(ex, context)
+  File "/Users/evgenijvavaev/PycharmProjects/final_project/venv/lib/python3.10/site-packages/numexpr/necompiler.py", line 696, in getExprNames
+    ex = stringToExpression(text, {}, context)
+  File "/Users/evgenijvavaev/PycharmProjects/final_project/venv/lib/python3.10/site-packages/numexpr/necompiler.py", line 289, in stringToExpression
+    ex = eval(c, names)
+  File "<expr>", line 1, in <module>
+TypeError: unsupported operand type(s) for ^: 'VariableNode' and 'OpNode'
+[2022-06-08 12:52:21,157 | exception | (form_validation.py).is_math_expr(22) | ERROR] В качестве аргумента функции is_math_expr возможно передается неподдерживаемый тип выражения.
+Traceback (most recent call last):
+  File "/Users/evgenijvavaev/PycharmProjects/final_project/difequation/main/form_validation.py", line 14, in is_math_expr
+    return isinstance(ne.evaluate(expr), numpy.ndarray)
+  File "/Users/evgenijvavaev/PycharmProjects/final_project/venv/lib/python3.10/site-packages/numexpr/necompiler.py", line 809, in evaluate
+    _names_cache[expr_key] = getExprNames(ex, context)
+  File "/Users/evgenijvavaev/PycharmProjects/final_project/venv/lib/python3.10/site-packages/numexpr/necompiler.py", line 696, in getExprNames
+    ex = stringToExpression(text, {}, context)
+  File "/Users/evgenijvavaev/PycharmProjects/final_project/venv/lib/python3.10/site-packages/numexpr/necompiler.py", line 289, in stringToExpression
+    ex = eval(c, names)
+  File "<expr>", line 1, in <module>
+TypeError: unsupported operand type(s) for ^: 'VariableNode' and 'OpNode'
+[2022-06-09 17:26:48,852 | django.request | (log.py).log_response(241) | WARNING] Not Found: /favicon.ico

@@ -1,0 +1,116 @@
+body {
+    font-family: roboto, sans-serif;
+    font-size: 15px;
+}
+
+.info {
+    background-color: #f9f9ff;
+    padding: 10px 25px;
+}
+
+.info__switch {
+    display: none;
+}
+
+.info__body {
+    max-height: 480px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.info__switch:checked~.info__body {
+    max-height: 0px;
+}
+
+.info__headline::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 4px;
+    border: 6px solid #39739d;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+}
+
+.info__switch:checked~.info__headline::before {
+    transform: rotate(180deg) translateY(6px);
+}
+
+.info__headline {
+    display: block;
+    position: relative;
+    margin-bottom: 15px;
+    user-select: none;
+    color: #39739d;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.info__headline:hover {
+    text-decoration: underline;
+}
+
+span {
+    width: 200px;
+}
+
+span.page-title {
+    font-size: 17px;
+    font-family: fantasy;
+    color: white;
+    margin: 0px 300px 0px 280px;
+}
+
+div.equation {
+    margin: 15px 0px;
+    text-align: center;
+    font-family: libertine;
+}
+
+div.equation p {
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin-left: 330px;
+    margin-right: 330px;
+    margin-bottom: 30px;
+}
+
+#inputOrder, #inputCoefficients, #inputF, #inputBegin, #inputEnd, #inputInit, #inputStep {
+    width: 660px;
+    margin: 15px 300px 15px 350px
+}
+
+#inputOrder input, #inputBegin input, #inputEnd input, #inputStep input {
+    width: 50px;
+}
+
+#inputCoefficients input, #inputF input, #inputInit input {
+    width: 305px;
+}
+
+button {
+    margin: 15px 300px 15px 475px;
+}
+
+span.input-group-text {
+    background-color: #787c81;
+    color: white;
+    font-family: inherit;
+    width: 350px;
+}
+
+ul.errorlist {
+    color: red;
+    padding: 0px;
+    list-style: none;
+    font-size: 14px;
+}
+
+span.eq_parameters {
+    background-color: #787c81;
+    color: white;
+    font-family: inherit;
+    width: 370px;
+}

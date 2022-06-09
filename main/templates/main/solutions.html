@@ -1,0 +1,64 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block header %}
+    <link rel='stylesheet' href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block span %}
+    {{ span }}
+{% endblock %}
+
+{% block body %}
+    {% if equations %}
+        {% for equation in equations %}
+            <div class="input-group">
+                <span class="input-group-text eq_parameters">Порядок дифференциального уравнения n:</span>
+                <input type="text" class="form-control" value="{{ equation.order }}">
+            </div>
+            <div class="input-group">
+                <span class="input-group-text eq_parameters">Коэффициенты a<sub>0</sub>(x), a<sub>1</sub>(x),
+                    a<sub>2</sub>(x), ..., a<sub>n</sub>(x):</span>
+                <input type="text" class="form-control" value="{{ equation.coefficients }}">
+            </div>
+            <div class="input-group">
+                <span class="input-group-text eq_parameters">Правая часть уравнения:</span>
+                <input type="text" class="form-control" value="{{ equation.right_side }}">
+            </div>
+            <div class="input-group">
+                <span class="input-group-text eq_parameters">Область решения:</span>
+                <input type="text" class="form-control" value="[{{ equation.segment_begin }}, {{equation.segment_end}}]">
+            </div>
+            <div class="input-group">
+                <span class="input-group-text eq_parameters">Начальные условия y(0), y<sup>'</sup>(0),
+                    y<sup>''</sup>(0), ..., y<sup>(n-1)</sup>(0):</span>
+                <input type="text" class="form-control" value="{{ equation.init_conditions }}">
+            </div>
+            <div class="input-group">
+                <span class="input-group-text eq_parameters">Шаг решения h:</span>
+                <input type="text" class="form-control" value="{{ equation.step }}">
+            </div>
+            <div class="info">
+                <input id="{{ equation.id }}" class="info__switch" type="checkbox">
+                <label for="{{ equation.id }}" class="info__headline">Решение задачи</label>
+                <div class="info__body">
+                    {% for solution in solutions %}
+                        {% if solution.equation.id == equation.id %}
+                            <img src="{{solution.graph_solution}}"/>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <a class="btn btn-dark" href="delete/{{ equation.id }}" role="button">Удалить</a>
+            <br><br><br><br><br>
+        {% endfor %}
+    {% else %}
+        <div class="alert alert-danger" role="alert">
+            Нет решенных задач.
+        </div>
+    {% endif %}
+{% endblock %}

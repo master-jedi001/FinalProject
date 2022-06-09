@@ -1,0 +1,73 @@
+[2022-06-08 12:50:11,565 | django.server | (basehttp.py).log_message(187) | INFO] "GET / HTTP/1.1" 200 5419
+[2022-06-08 12:50:11,620 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/css/style.css HTTP/1.1" 304 0
+[2022-06-08 12:51:38,940 | difequation.main | (forms.py).clean(38) | INFO] Конец расчетной области 0 не больше начала расчетной области 5
+[2022-06-08 12:51:38,941 | difequation.main | (form_validation.py).are_coefficients_valid(63) | DEBUG] Количество коэффициентов ['1', '1', '1', '1', '1', '1', '1'] не соответствует порядку уравнения 3.
+[2022-06-08 12:51:38,941 | difequation.main | (form_validation.py).are_coefficients_valid(64) | DEBUG] Или коэффициент при старшей производной равен нулю.
+[2022-06-08 12:51:38,941 | difequation.main | (forms.py).clean(53) | INFO] Коэффициенты уравнения 1, 1, 1, 1, 1, 1, 1 не прошли валидацию.
+[2022-06-08 12:51:38,941 | difequation.main | (form_validation.py).are_init_conditions_valid(50) | DEBUG] Количество начальных условий ['3'] не соответствует порядку уравнения 3.
+[2022-06-08 12:51:38,941 | difequation.main | (forms.py).clean(59) | INFO] Начальные условия 3 не прошли валидацию.
+[2022-06-08 12:51:38,942 | difequation.main | (forms.py).clean(63) | INFO] Правая часть уравнения не прошла валидацию. x^3 + y^2 не является математическим выражением.
+[2022-06-08 12:51:38,964 | django.server | (basehttp.py).log_message(187) | INFO] "POST / HTTP/1.1" 200 6665
+[2022-06-08 12:52:21,155 | difequation.main | (forms.py).clean(38) | INFO] Конец расчетной области 0 не больше начала расчетной области 5
+[2022-06-08 12:52:21,156 | difequation.main | (form_validation.py).are_init_conditions_valid(50) | DEBUG] Количество начальных условий ['3'] не соответствует порядку уравнения 3.
+[2022-06-08 12:52:21,157 | difequation.main | (forms.py).clean(59) | INFO] Начальные условия 3 не прошли валидацию.
+[2022-06-08 12:52:21,157 | difequation.main | (forms.py).clean(63) | INFO] Правая часть уравнения не прошла валидацию. x^3 + x^2 не является математическим выражением.
+[2022-06-08 12:52:21,175 | django.server | (basehttp.py).log_message(187) | INFO] "POST / HTTP/1.1" 200 6138
+[2022-06-08 12:53:06,462 | difequation.main | (form_validation.py).are_init_conditions_valid(50) | DEBUG] Количество начальных условий ['3'] не соответствует порядку уравнения 3.
+[2022-06-08 12:53:06,463 | difequation.main | (forms.py).clean(59) | INFO] Начальные условия 3 не прошли валидацию.
+[2022-06-08 12:53:06,482 | django.server | (basehttp.py).log_message(187) | INFO] "POST / HTTP/1.1" 200 5869
+[2022-06-08 12:53:18,290 | difequation.main | (views.py).index(29) | INFO] Форма EquationForm прошла валидацию. Все поля заполнены корректно.
+[2022-06-08 12:53:18,352 | difequation.main | (views.py).index(32) | INFO] Форма EquationForm сохранена в БД difEquations.
+[2022-06-08 12:53:18,352 | difequation.main | (solver.py).runge_kutta(37) | INFO] Запущен алгоритм Рунге-Кутты для решения задачи Коши.
+[2022-06-08 12:53:18,402 | difequation.main | (views.py).index(42) | INFO] Алгоритм Рунге-Кутты завершил свою работу. Задача Коши решена.
+[2022-06-08 12:53:18,414 | difequation.main | (solver.py).solution_plot(58) | INFO] Построен график 16.jpg.
+[2022-06-08 12:53:18,449 | difequation.main | (solver.py).solution_plot(61) | INFO] График 16.jpg сохранен в static/images/16.jpg.
+[2022-06-08 12:53:18,456 | difequation.main | (views.py).index(48) | INFO] Решение задачи Коши сохранено в БД difEquations с id = 16.
+[2022-06-08 12:53:18,460 | django.server | (basehttp.py).log_message(187) | INFO] "POST / HTTP/1.1" 200 5419
+[2022-06-08 12:53:20,340 | difequation.main | (views.py).solutions(14) | INFO] Отправлен запрос в БД на получение всех имеющихся решений дифференциальных уравнений.
+[2022-06-08 12:53:20,340 | difequation.main | (views.py).solutions(16) | INFO] Отправлен запрос в БД на получение всех имеющихся дифференциальных задач Коши.
+[2022-06-08 12:53:20,420 | django.server | (basehttp.py).log_message(187) | INFO] "GET /solutions HTTP/1.1" 200 27544
+[2022-06-08 12:53:20,423 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/images/15.jpg HTTP/1.1" 304 0
+[2022-06-08 12:53:20,434 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/images/11.jpg HTTP/1.1" 304 0
+[2022-06-08 12:53:20,435 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/images/14.jpg HTTP/1.1" 304 0
+[2022-06-08 12:53:20,439 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/images/16.jpg HTTP/1.1" 200 27217
+[2022-06-08 12:53:32,122 | django.server | (basehttp.py).log_message(187) | INFO] "GET /delete/16 HTTP/1.1" 301 0
+[2022-06-08 12:53:32,194 | difequation.main | (views.py).delete(58) | INFO] Отправлен запрос в БД на получение объекта equation с id = 16.
+[2022-06-08 12:53:32,200 | difequation.main | (views.py).delete(60) | INFO] Объекта equation с id = 16 удален.
+[2022-06-08 12:53:32,201 | django.server | (basehttp.py).log_message(187) | INFO] "GET /delete/16/ HTTP/1.1" 302 0
+[2022-06-08 12:53:32,208 | difequation.main | (views.py).solutions(14) | INFO] Отправлен запрос в БД на получение всех имеющихся решений дифференциальных уравнений.
+[2022-06-08 12:53:32,208 | difequation.main | (views.py).solutions(16) | INFO] Отправлен запрос в БД на получение всех имеющихся дифференциальных задач Коши.
+[2022-06-08 12:53:32,262 | django.server | (basehttp.py).log_message(187) | INFO] "GET /solutions HTTP/1.1" 200 24557
+[2022-06-08 12:53:41,208 | django.server | (basehttp.py).log_message(187) | INFO] "GET / HTTP/1.1" 200 5419
+[2022-06-08 13:14:51,292 | difequation.main | (views.py).solutions(14) | INFO] Отправлен запрос в БД на получение всех имеющихся решений дифференциальных уравнений.
+[2022-06-08 13:14:51,293 | difequation.main | (views.py).solutions(16) | INFO] Отправлен запрос в БД на получение всех имеющихся дифференциальных задач Коши.
+[2022-06-08 13:14:51,374 | django.server | (basehttp.py).log_message(187) | INFO] "GET /solutions HTTP/1.1" 200 24557
+[2022-06-08 13:14:51,378 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/images/14.jpg HTTP/1.1" 304 0
+[2022-06-08 13:14:51,378 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/images/11.jpg HTTP/1.1" 304 0
+[2022-06-08 13:14:51,384 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/css/style.css HTTP/1.1" 304 0
+[2022-06-08 13:14:51,384 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/images/11.jpg HTTP/1.1" 304 0
+[2022-06-08 13:14:51,384 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/images/14.jpg HTTP/1.1" 304 0
+[2022-06-09 10:02:48,367 | django.server | (basehttp.py).log_message(187) | INFO] "GET / HTTP/1.1" 200 5419
+[2022-06-09 10:02:48,434 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/css/style.css HTTP/1.1" 304 0
+[2022-06-09 10:18:56,245 | difequation.main | (views.py).solutions(14) | INFO] Отправлен запрос в БД на получение всех имеющихся решений дифференциальных уравнений.
+[2022-06-09 10:18:56,246 | difequation.main | (views.py).solutions(16) | INFO] Отправлен запрос в БД на получение всех имеющихся дифференциальных задач Коши.
+[2022-06-09 10:18:56,323 | django.server | (basehttp.py).log_message(187) | INFO] "GET /solutions HTTP/1.1" 200 24557
+[2022-06-09 10:18:56,327 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/images/2.jpg HTTP/1.1" 304 0
+[2022-06-09 10:18:56,328 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/images/4.jpg HTTP/1.1" 304 0
+[2022-06-09 10:18:56,328 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/images/11.jpg HTTP/1.1" 304 0
+[2022-06-09 10:18:56,328 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/images/10.jpg HTTP/1.1" 304 0
+[2022-06-09 10:18:56,328 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/images/3.jpg HTTP/1.1" 304 0
+[2022-06-09 10:18:56,328 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/images/6.jpg HTTP/1.1" 304 0
+[2022-06-09 10:18:56,330 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/images/14.jpg HTTP/1.1" 304 0
+[2022-06-09 10:18:56,349 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/images/7.jpg HTTP/1.1" 200 32592
+[2022-06-09 10:18:56,349 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/images/9.jpg HTTP/1.1" 200 26564
+[2022-06-09 10:20:00,609 | django.server | (basehttp.py).log_message(187) | INFO] "GET /delete/3 HTTP/1.1" 301 0
+[2022-06-09 10:20:00,652 | difequation.main | (views.py).delete(58) | INFO] Отправлен запрос в БД на получение объекта equation с id = 3.
+[2022-06-09 10:20:00,655 | difequation.main | (views.py).delete(60) | INFO] Объекта equation с id = 3 удален.
+[2022-06-09 10:20:00,655 | django.server | (basehttp.py).log_message(187) | INFO] "GET /delete/3/ HTTP/1.1" 302 0
+[2022-06-09 10:20:00,658 | difequation.main | (views.py).solutions(14) | INFO] Отправлен запрос в БД на получение всех имеющихся решений дифференциальных уравнений.
+[2022-06-09 10:20:00,658 | difequation.main | (views.py).solutions(16) | INFO] Отправлен запрос в БД на получение всех имеющихся дифференциальных задач Коши.
+[2022-06-09 10:20:00,693 | django.server | (basehttp.py).log_message(187) | INFO] "GET /solutions HTTP/1.1" 200 21676
+[2022-06-09 17:26:48,749 | django.server | (basehttp.py).log_message(187) | INFO] "GET / HTTP/1.1" 200 5419
+[2022-06-09 17:26:48,820 | django.server | (basehttp.py).log_message(187) | INFO] "GET /static/css/style.css HTTP/1.1" 304 0
+[2022-06-09 17:26:48,852 | django.server | (basehttp.py).log_message(187) | WARNING] "GET /favicon.ico HTTP/1.1" 404 2618
