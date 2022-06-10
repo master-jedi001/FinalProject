@@ -58,6 +58,7 @@ def solution_plot(x, y, h, id):
     logger.info(f'Построен график {id}.jpg.')
     path = f'static/images/{id}.jpg'
     plt.savefig(path)
+    plt.close()
     logger.info(f'График {id}.jpg сохранен в {path}.')
     return path
 
